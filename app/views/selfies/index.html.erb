@@ -1,0 +1,9 @@
+<ul>
+<% @selfies.each do |selfie| %>
+  <li>
+  <%= selfie.text %>
+  <%= link_to 'delete', selfie_path(selfie), method: 'delete' %>
+  <%= link_to 'edit', edit_selfie_path(selfie), method: 'get' %> </li>  
+  <% end %>
+</ul>
+<%= link_to 'new', new_selfie_path %>
